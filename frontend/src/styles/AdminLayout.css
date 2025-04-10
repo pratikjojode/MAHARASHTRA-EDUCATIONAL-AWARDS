@@ -1,0 +1,41 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  position: relative;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  z-index: 1;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .admin-main.blurred {
+    filter: blur(2px);
+    pointer-events: none;
+  }
+}
