@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   FaTachometerAlt,
   FaUsers,
@@ -11,6 +11,13 @@ import {
 import "../styles/Sidebar.css";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("isAdmin");
+    navigate("/admin-login");
+  };
+
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-header">
@@ -30,9 +37,10 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <NavLink to="/admin/settings" onClick={closeSidebar}>
           <FaCog /> Settings
         </NavLink>
-        <NavLink to="/logout" className="logout-link" onClick={closeSidebar}>
+        {/* Logout as a button */}
+        <button className="logout-btn" onClick={logout}>
           <FaSignOutAlt /> Logout
-        </NavLink>
+        </button>
       </nav>
     </div>
   );
