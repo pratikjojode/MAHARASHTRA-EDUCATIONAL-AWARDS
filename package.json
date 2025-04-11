@@ -12,5 +12,9 @@
   "description": "",
   "devDependencies": {
     "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "framer-motion": "^12.6.5",
+    "gsap": "^3.12.7"
   }
 }

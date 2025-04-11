@@ -1,48 +1,128 @@
 /* components/Sponsors/Sponsors.css */
 .sponsors {
-    padding: 5rem 0;
-    background-color: white;
+  padding: 6rem 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsors::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  /* Optional wave overlay for added design – update URL if you have a custom asset */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='150'%3E%3Cpath fill='%23ffffff' fill-opacity='0.3' d='M0,64L1440,192V150H0Z'/%3E%3C/svg%3E")
+    no-repeat bottom center;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #334e68;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  border-radius: 2px;
+}
+
+.divider {
+  height: 2px;
+  width: 100px;
+  background: linear-gradient(to right, transparent, #e63946, transparent);
+  margin: 1rem auto;
+}
+
+.section-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #5f7a80;
+  margin-bottom: 2rem;
+}
+
+.sponsor-cta {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sponsor-cta:hover {
+  transform: translateY(-5px);
+}
+
+.sponsor-cta p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #334e68;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.btn.btn-sponsor {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #e63946;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+  display: inline-block;
+}
+
+.btn.btn-sponsor:hover {
+  background: #bf3a3a;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.5rem;
   }
-  
-  .section-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
-  
+
   .sponsor-cta {
-    background-color: #f8f9fa;
-    padding: 3rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 1.5rem 2rem;
   }
-  
-  .sponsor-cta p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 2rem;
+
+  .btn.btn-sponsor {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
   }
-  
-  .btn-sponsor {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #e63946;
-    color: white;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid #e63946;
-  }
-  
-  .btn-sponsor:hover {
-    background-color: transparent;
-    color: #e63946;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
+}

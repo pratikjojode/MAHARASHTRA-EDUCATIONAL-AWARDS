@@ -6,11 +6,14 @@ import {
 } from "react-router-dom";
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Home from "./pages/HomePage";
 import "./App.css";
 import "./index.css";
 import AdminLayout from "./layout/AdminLayout";
+import Sponsors from "./component/Sponsors/Sponsors";
 
 function App() {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
@@ -20,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/sponsors" element={<Sponsors />} />
 
         {isAdmin && (
           <Route path="/admin/dashboard" element={<AdminLayout />}>

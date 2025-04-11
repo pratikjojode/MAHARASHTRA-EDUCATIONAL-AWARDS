@@ -2,10 +2,8 @@
 export const exportToCSV = (data, filename) => {
   if (!data || data.length === 0) return;
 
-  // Extract headers
   const headers = Object.keys(data[0]);
 
-  // Create CSV content
   let csvContent = headers.join(",") + "\n";
 
   data.forEach((row) => {

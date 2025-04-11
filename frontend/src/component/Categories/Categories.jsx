@@ -1,7 +1,6 @@
 // components/Categories/Categories.jsx
-import React from 'react';
-import '../../styles/Categories.css';
-
+import React from "react";
+import "../../styles/Categories.css";
 
 const Categories = () => {
   return (

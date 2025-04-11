@@ -1,50 +1,111 @@
 /* components/Jobizza/Jobizza.css */
+
+/* Base section styling */
 .jobizza {
-    padding: 5rem 0;
-    background-color: white;
-  }
-  
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #fdfdfd, #f4f7fb);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container for consistent centering */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Flex layout for content */
+.jobizza-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover, lift the card slightly */
+.jobizza-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.jobizza-logo {
+  flex: 0 0 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #e0e0e0;
+  padding-right: 2rem;
+  /* Optional: animation for logo on hover */
+  transition: transform 0.3s ease;
+}
+
+.jobizza-logo img {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.jobizza-logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Jobizza info styling */
+.jobizza-info {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+.jobizza-info h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.jobizza-info h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #e63946;
+  border-radius: 2px;
+}
+
+.jobizza-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .jobizza-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .jobizza-logo {
-    flex: 1;
+    flex-direction: column;
     text-align: center;
   }
-  
-  .jobizza-logo img {
-    max-width: 200px;
-    height: auto;
+
+  .jobizza-logo {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
   }
-  
-  .jobizza-info {
-    flex: 2;
-  }
-  
+
   .jobizza-info h2 {
     font-size: 2rem;
-    color: #333;
-    margin-bottom: 1.5rem;
   }
-  
+
   .jobizza-info p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
   }
-  
-  @media (max-width: 768px) {
-    .jobizza-content {
-      flex-direction: column;
-    }
-    
-    .jobizza-logo {
-      margin-bottom: 2rem;
-    }
-  }
+}

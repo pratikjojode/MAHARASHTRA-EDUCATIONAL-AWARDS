@@ -12,7 +12,6 @@ function AdminLogin() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate network delay for better UX
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     try {

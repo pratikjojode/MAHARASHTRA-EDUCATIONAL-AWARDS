@@ -1,252 +1,293 @@
-/* components/Hero/Hero.css */
 .hero {
-    position: relative;
-    height: 100vh;
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-top: 80px; /* Account for fixed header */
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 80px; /* Account for fixed header */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Presentation badge */
+.presented-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+.presented-text {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.presenter-logo {
+  height: 30px;
+  max-width: 150px;
+  width: auto;
+}
+
+.award-title {
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.award-icon {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title-line-1 {
+  display: block;
+  font-size: 4rem;
+}
+
+.title-line-2 {
+  display: block;
+  font-size: 5rem;
+  color: #e63946;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  animation: fadeInUp 1s ease;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #e63946;
+  color: white;
+  border: 2px solid #e63946;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Arrows */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  to {
+    opacity: 1;
   }
-  
-  .bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-content {
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-  
-  .presented-by {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 12px 25px;
-    border-radius: 30px;
-    margin-bottom: 30px;
-    animation: fadeInDown 1s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .presented-text {
-    color: #333;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  
-  .presenter-logo {
-    height: 30px;
-    width: auto;
-    max-width: 150px;
-  }
-  
-  .award-title {
-    margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease;
-  }
-  
-  .award-icon {
-    font-size: 2.5rem;
-    color: #e63946;
-    margin-bottom: 15px;
-  }
-  
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
   .hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 4.5rem;
-    line-height: 1.2;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 3.5rem;
   }
-  
   .title-line-1 {
-    display: block;
+    font-size: 3rem;
+  }
+  .title-line-2 {
     font-size: 4rem;
   }
-  
-  .title-line-2 {
-    display: block;
-    font-size: 5rem;
-    color: #e63946;
-  }
-  
   .hero-subtitle {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.2s ease;
+    font-size: 1.5rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: unset;
+  }
+  .bg-image {
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .title-line-1 {
+    font-size: 2.5rem;
+  }
+  .title-line-2 {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
   .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    animation: fadeInUp 1s ease;
+    flex-direction: column;
+    gap: 15px;
   }
-  
   .btn {
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-  }
-  
-  .btn-icon {
-    transition: transform 0.3s ease;
-  }
-  
-  .btn-primary {
-    background-color: #e63946;
-    color: white;
-    border: 2px solid #e63946;
-  }
-  
-  .btn-primary:hover {
-    background-color: transparent;
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  }
-  
-  .btn-primary:hover .btn-icon {
-    transform: translateX(5px);
-  }
-  
-  .btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  .btn-secondary:hover {
-    background-color: white;
-    color: #333;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn-secondary:hover .btn-icon {
-    transform: translateX(5px);
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 992px) {
-    .hero h1 {
-      font-size: 3.5rem;
-    }
-    .title-line-1 {
-      font-size: 3rem;
-    }
-    .title-line-2 {
-      font-size: 4rem;
-    }
-    .hero-subtitle {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero {
-      min-height: 600px;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-    }
-    .title-line-1 {
-      font-size: 2.5rem;
-    }
-    .title-line-2 {
-      font-size: 3rem;
-    }
-    .hero-subtitle {
-      font-size: 1.3rem;
-    }
-    .hero-buttons {
-      flex-direction: column;
-      gap: 15px;
-    }
-    .btn {
-      padding: 12px 25px;
+    padding: 12px 25px;
     justify-content: center;
-    }
   }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    .title-line-1 {
-      font-size: 2rem;
-    }
-    .title-line-2 {
-      font-size: 2.5rem;
-    }
-    .presented-by {
-      padding: 10px 20px;
-    }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
   }
+  .title-line-1 {
+    font-size: 2rem;
+  }
+  .title-line-2 {
+    font-size: 2.5rem;
+  }
+  .presented-by {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import "../styles/AdminLayout.css";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Sidebar from "../component/Sidebar";
 import { FaBars } from "react-icons/fa";
 
 const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-  };
-
-  const logout = () => {
-    localStorage.removeItem("isAdmin");
-    navigate("/admin/login");
   };
 
   return (
