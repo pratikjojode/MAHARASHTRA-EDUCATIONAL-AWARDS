@@ -7,7 +7,7 @@ import {
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 
-import HomePage from "./pages/HomePage";
+import Home from "./pages/HomePage";
 import "./App.css";
 import "./index.css";
 import AdminLayout from "./layout/AdminLayout";
@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/admin-login" element={<AdminLogin />} />
 
         {isAdmin && (

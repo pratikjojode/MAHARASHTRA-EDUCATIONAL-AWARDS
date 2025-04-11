@@ -1,0 +1,48 @@
+/* components/Sponsors/Sponsors.css */
+.sponsors {
+    padding: 5rem 0;
+    background-color: white;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  
+  .sponsor-cta {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .sponsor-cta p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-sponsor {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e63946;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #e63946;
+  }
+  
+  .btn-sponsor:hover {
+    background-color: transparent;
+    color: #e63946;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }

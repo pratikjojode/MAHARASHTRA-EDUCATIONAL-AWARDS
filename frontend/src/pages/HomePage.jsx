@@ -1,11 +1,30 @@
-import React from "react";
+// pages/Home.jsx
+import React from 'react';
+import Header from '../component/Header/Header';
+import Hero from '../component/Hero/Hero';
+import EventInfo from '../component/EventInfo/EventInfo';
+import Overview from '../component/Overview/Overview';
+import ChiefGuest from '../component/Chief-Guest/Chief-Guest';
+import Sponsors from '../component/Sponsors/Sponsors';
+import Categories from '../component/Categories/Categories';
+import Jobizza from '../component/Jobizza/Jobizza';
+import Footer from '../component/Footer/Footer';
 
-const HomePage = () => {
+
+const Home = () => {
   return (
-    <>
-      <h1>Maharashtra Educational Awards</h1>
-    </>
+    <div className="home-page">
+      <Header />
+      <Hero />
+      <EventInfo />
+      <Overview />
+      <ChiefGuest />
+      <Sponsors />
+      <Categories />
+      <Jobizza />
+      <Footer />
+    </div>
   );
 };
 
-export default HomePage;
+export default Home;

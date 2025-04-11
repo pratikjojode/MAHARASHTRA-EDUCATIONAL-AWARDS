@@ -1,0 +1,57 @@
+/* components/ChiefGuest/ChiefGuest.css */
+.chief-guest {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .guest-profile {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .guest-image {
+    flex: 1;
+  }
+  
+  .guest-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guest-details {
+    flex: 1.5;
+  }
+  
+  .guest-details h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .guest-title {
+    font-size: 1.2rem;
+    color: #e63946;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .guest-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .guest-profile {
+      flex-direction: column;
+    }
+    
+    .guest-image {
+      margin-bottom: 2rem;
+    }
+  }
