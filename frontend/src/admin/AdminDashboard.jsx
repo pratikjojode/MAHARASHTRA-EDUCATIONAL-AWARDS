@@ -115,7 +115,7 @@ function AdminDashboard() {
 
         <div className="dashboard-actions">
           <button onClick={handleExport} className="export-button">
-            <FaFileExport /> Export to CSV
+            <FaFileExport /> Download to CSV
           </button>
           <button onClick={fetchData} className="refresh-button">
             <FaSync /> Refresh
