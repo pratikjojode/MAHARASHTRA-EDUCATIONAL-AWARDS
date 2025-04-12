@@ -1,7 +1,7 @@
-// components/Jobizza/Jobizza.jsx
 import React from 'react';
 import '../../styles/Jobizza.css';
 import jobizzaLogo from '../../assets/jobizza-logo.png';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Jobizza = () => {
   return (
@@ -25,6 +25,14 @@ const Jobizza = () => {
               by Jobizza include the Maharashtra Career Fair, EduTech Summit, and the Annual Teachers' 
               Excellence Conference.
             </p>
+            <a 
+              href="https://www.jobizza.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="jobizza-button"
+            >
+              Learn more <FaArrowRight className="button-icon" />
+            </a>
           </div>
         </div>
       </div>

@@ -109,3 +109,33 @@
     font-size: 1rem;
   }
 }
+/* Add these new styles at the end of the file */
+.jobizza-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.jobizza-button:hover {
+  background-color: #d62b3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.jobizza-button:hover .button-icon {
+  transform: translateX(4px);
+}
+
+/* Keep all existing media queries and other styles the same */

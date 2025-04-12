@@ -24,12 +24,12 @@ const ChiefGuest = () => {
               <strong>Pro Vice Chancellor at Savitribai Phule Pune University</strong>
             </p>
             <p className="guest-bio">
-              <strong>Dr. Parag Kalkar</strong> is Director, Sinhgad Institute of Management, Dean, Faculty of Commerce and Management Member, Academic Council Member & Senate at Savitribai Phule Pune University.
+              <strong>Dr. Parag Kalkar</strong> is Director of, Sinhgad Institute of Management, Dean, Faculty of Commerce and Management Member, Academic Council Member & Senate at Savitribai Phule Pune University.
               He holds an M.Com, MMS (Finance), PhD and FDP (IIMA), and has more than 24 years of teaching experience.
             </p>
             <p className="guest-bio">
               As our chief guest, <strong>Dr. Kalkar</strong> will share his
-              insights on the <strong>future of education in India</strong>
+              insights on the <strong>future of education in India </strong>
               and the{" "}
               <strong>
                 role educators play in shaping the nation's destiny

@@ -2,14 +2,15 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../styles/Hero.css";
-import heroBg1 from "../../assets/hero-bg.jpg";
+import heroBg1 from "../../assets/hero-bgg3.jpg";
 import heroBg2 from "../../assets/hero-bgg2.jpg";
-import heroBg3 from "../../assets/hero-bgg3.jpg";
+// import heroBg3 from "../../assets/hero-bg.jpg";
 import jobizzaLogo from "../../assets/jobizza-logo.png";
+import anytimeBarterLogo from "../../assets/anytime-barter-logo.png";
 import { FaArrowRight, FaAward } from "react-icons/fa";
 
 const Hero = () => {
-  const heroImages = [heroBg1, heroBg2, heroBg3];
+  const heroImages = [heroBg1, heroBg2];
 
   return (
     <section className="hero">
@@ -17,7 +18,7 @@ const Hero = () => {
         <Carousel
           autoPlay
           infiniteLoop
-          interval={6000}
+          interval={5000}
           showThumbs={false}
           showStatus={false}
           showIndicators={false}
@@ -42,7 +43,10 @@ const Hero = () => {
       <div className="hero-content">
         <div className="presented-by">
           <span className="presented-text">Presented by</span>
-          <img src={jobizzaLogo} alt="Jobizza" className="presenter-logo" />
+          <div className="sponsor-logos">
+            <img src={jobizzaLogo} alt="Jobizza" className="presenter-logo" />
+            <img src={anytimeBarterLogo} alt="Anytime Barter" className="presenter-logo" />
+          </div>
         </div>
 
         <div className="award-title">

@@ -287,7 +287,7 @@ const SponsorsPage = () => {
                         onClick={handleEmailClick}
                         className="btn btn-contact"
                       >
-                        Email Gaurav Sharma
+                        gaurav@jobizza.com
                       </button>
                     </div>
                   ) : (

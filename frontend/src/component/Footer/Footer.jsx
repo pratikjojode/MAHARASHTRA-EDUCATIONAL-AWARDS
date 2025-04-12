@@ -1,7 +1,7 @@
-// components/Footer/Footer.jsx
 import React from 'react';
 import './Footer.css';
-
+import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer" id="contact">
@@ -21,19 +21,21 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-section">
-            <h3>Contact Info</h3>
-            <p><i className="fas fa-map-marker-alt"></i> Sunny's World, Pune</p>
-            <p><i className="fas fa-phone"></i> +91 8888181889</p>
-            <p><i className="fas fa-envelope"></i> gaurav@jobizza.com</p>
+          <h3>Contact Info</h3>
+          <p><FaMapMarkerAlt className="footer-icon" /> Sunny's World, Pune</p>
+          <p><FaPhone className="footer-icon" /> +91 8888181889</p>
+          <p><FaEnvelope className="footer-icon" /> gaurav@jobizza.com</p>
           </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Maharashtra Education Icon Awards. All rights reserved.</p>
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            <span><FaFacebook /></span>
+            <span><FaInstagram /></span>
+            <a href="https://www.linkedin.com/company/jobizza-justice-with-your-innovations/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <span><FaEnvelope /></span>
           </div>
         </div>
       </div>
