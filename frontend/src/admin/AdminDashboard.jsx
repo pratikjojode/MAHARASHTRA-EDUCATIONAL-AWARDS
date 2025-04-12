@@ -9,8 +9,8 @@ import {
   FaSearch,
   FaFilter,
   FaChevronDown,
-  FaChevronUp,
   FaEye,
+  FaThLarge,
 } from "react-icons/fa";
 import { Modal } from "antd";
 import "../styles/AdminDashboard.css";
@@ -26,6 +26,7 @@ function AdminDashboard() {
   const [visibleColumns, setVisibleColumns] = useState({});
   const [viewModalVisible, setViewModalVisible] = useState(false);
   const [selectedResponse, setSelectedResponse] = useState(null);
+  const [viewMode, setViewMode] = useState("table"); // 'table' or 'grid'
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -41,19 +42,15 @@ function AdminDashboard() {
       if (res.data.data.length > 0) {
         const allColumns = Object.keys(res.data.data[0]);
         const initialVisible = {};
-
-        // Default visible columns (first 4 + email)
         const defaultVisible = [
           "Timestamp",
           "1. Institution Name",
           "2. Institution Type",
           "Email address",
         ];
-
         allColumns.forEach((col) => {
           initialVisible[col] = defaultVisible.includes(col);
         });
-
         setVisibleColumns(initialVisible);
       }
     } catch (err) {
@@ -119,6 +116,14 @@ function AdminDashboard() {
           </button>
           <button onClick={fetchData} className="refresh-button">
             <FaSync /> Refresh
+          </button>
+          <button
+            onClick={() =>
+              setViewMode((prev) => (prev === "table" ? "grid" : "table"))
+            }
+            className="toggle-view-button"
+          >
+            <FaThLarge /> {viewMode === "table" ? "Grid View" : "Table View"}
           </button>
         </div>
       </div>
@@ -215,7 +220,7 @@ function AdminDashboard() {
             </button>
           )}
         </div>
-      ) : (
+      ) : viewMode === "table" ? (
         <>
           <div className="table-container">
             <div className="table-scroll-wrapper">
@@ -286,11 +291,43 @@ function AdminDashboard() {
             </button>
           </div>
         </>
+      ) : (
+        // Grid View
+        <div className="grid-view-container">
+          {paginatedData.map((res, index) => (
+            <div key={index} className="grid-card">
+              <div className="grid-card-header">
+                <strong>{res["1. Institution Name"] || "No Title"}</strong>
+                <button
+                  onClick={() => showResponseDetails(res)}
+                  className="view-button"
+                >
+                  <FaEye />
+                </button>
+              </div>
+              <div className="grid-card-body">
+                {Object.entries(res).map(
+                  ([key, val]) =>
+                    visibleColumns[key] && (
+                      <div key={key} className="grid-card-item">
+                        <span className="grid-label">{key}:</span>{" "}
+                        <span className="grid-value">
+                          {String(val).length > 100
+                            ? `${String(val).substring(0, 100)}...`
+                            : val}
+                        </span>
+                      </div>
+                    )
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       )}
 
       <Modal
         title="Response Details"
-        visible={viewModalVisible}
+        open={viewModalVisible}
         onCancel={() => setViewModalVisible(false)}
         footer={null}
         width="80%"

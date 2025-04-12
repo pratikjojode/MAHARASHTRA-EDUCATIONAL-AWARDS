@@ -37,6 +37,9 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <NavLink to="/admin/settings" onClick={closeSidebar}>
           <FaCog /> Settings
         </NavLink>
+        <NavLink to="/" onClick={closeSidebar}>
+          <FaCog /> Home
+        </NavLink>
         {/* Logout as a button */}
         <button className="logout-btn" onClick={logout}>
           <FaSignOutAlt /> Logout

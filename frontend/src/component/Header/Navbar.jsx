@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import "../../styles/Navbar.css"; // Ensure the path to the CSS file is correct
+import "../../styles/Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,26 +22,46 @@ const Navbar = () => {
   return (
     <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        <Link to="/" className="logo-link" onClick={closeMenu}>
+        <NavLink to="/" className="logo-link" onClick={closeMenu}>
           <img src={logo} alt="Company Logo" className="logo" />
-        </Link>
+        </NavLink>
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <Link to="/" className="nav-link" onClick={closeMenu}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
             Home
-          </Link>
-          <Link to="/jobizza" className="nav-link" onClick={closeMenu}>
+          </NavLink>
+          <NavLink
+            to="/jobizza"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
             Explore
-          </Link>
-          <Link to="/chief-guest" className="nav-link" onClick={closeMenu}>
+          </NavLink>
+          <NavLink
+            to="/chief-guest"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
             Speakers
-          </Link>
-          <Link to="/sponsors" className="nav-link" onClick={closeMenu}>
+          </NavLink>
+          <NavLink
+            to="/sponsors"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
             Sponsors
-          </Link>
-          <Link to="/footer" className="nav-link" onClick={closeMenu}>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
 
         <button

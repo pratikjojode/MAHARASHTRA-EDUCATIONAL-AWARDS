@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiLock, FiLogIn, FiAlertCircle } from "react-icons/fi";
-import Navbar from "../component/Header/Navbar.jsx";
-import Footer from "../component/Footer/Footer.jsx";
 import "../styles/AdminLogin.css";
-function AdminLogin() {
+
+function AdminLogin({ setIsAdmin }) {
   const [secret, setSecret] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("isAdmin") === "true") {
+      navigate("/admin/dashboard");
+    }
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +24,8 @@ function AdminLogin() {
     try {
       if (secret === import.meta.env.VITE_ADMIN_SECRET) {
         localStorage.setItem("isAdmin", "true");
-        navigate("/admin/dashboard");
+        setIsAdmin(true); // trigger re-render in App.jsx
+        navigate("/admin/dashboard"); // redirect to dashboard
       } else {
         setError("Invalid access credentials");
         setSecret("");
@@ -30,8 +36,6 @@ function AdminLogin() {
   };
 
   return (
-    <>
-    <Navbar/>
     <div className="admin-login-container">
       <div className="admin-login-card">
         <div className="brand-section">
@@ -100,8 +104,6 @@ function AdminLogin() {
         </footer>
       </div>
     </div>
-    <Footer/>
-    </>
   );
 }
 

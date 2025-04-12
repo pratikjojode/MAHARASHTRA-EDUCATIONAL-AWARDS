@@ -371,3 +371,109 @@ button {
     flex-wrap: wrap;
   }
 }
+/* Styling the grid container */
+.grid-view-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Styling the individual grid card */
+.grid-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid card header (Institution Name + View Button) */
+.grid-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.grid-card-header strong {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.view-button {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: background 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Grid card body (key-value pairs) */
+.grid-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Styling individual items inside the grid card */
+.grid-card-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.grid-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 150px;
+}
+
+.grid-value {
+  color: var(--text-dark);
+  word-break: break-word;
+  max-width: 300px;
+}
+
+/* Truncate long values */
+.grid-value::after {
+  content: "...";
+  visibility: hidden;
+  color: transparent;
+}
+
+.grid-value:focus::after {
+  visibility: visible;
+}
+
+.grid-card-body .grid-card-item .grid-value {
+  max-width: 200px;
+}
+
+.grid-card-body .grid-card-item .grid-value {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .grid-view-container {
+    padding: 1rem;
+  }
+
+  .grid-card-header strong {
+    font-size: 1.1rem;
+  }
+}
