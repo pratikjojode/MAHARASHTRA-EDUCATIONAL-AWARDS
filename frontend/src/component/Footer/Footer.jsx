@@ -22,9 +22,9 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h3>Contact Info</h3>
-            <p><i className="fas fa-map-marker-alt"></i> XYZ Convention Center, Mumbai</p>
-            <p><i className="fas fa-phone"></i> +91 1234567890</p>
-            <p><i className="fas fa-envelope"></i> info@educationiconawards.com</p>
+            <p><i className="fas fa-map-marker-alt"></i> Sunny's World, Pune</p>
+            <p><i className="fas fa-phone"></i> +91 8888181889</p>
+            <p><i className="fas fa-envelope"></i> gaurav@jobizza.com</p>
           </div>
         </div>
         <div className="footer-bottom">

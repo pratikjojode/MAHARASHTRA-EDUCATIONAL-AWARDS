@@ -13,7 +13,8 @@ import Home from "./pages/HomePage";
 import "./App.css";
 import "./index.css";
 import AdminLayout from "./layout/AdminLayout";
-import Sponsors from "./component/Sponsors/Sponsors";
+
+import SponsorsPage from "./pages/SponsorsPage";
 
 function App() {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/sponsors" element={<SponsorsPage />} /> 
 
         {isAdmin && (
           <Route path="/admin/dashboard" element={<AdminLayout />}>

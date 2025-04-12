@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiLock, FiLogIn, FiAlertCircle } from "react-icons/fi";
+import Navbar from "../component/Header/Navbar.jsx";
+import Footer from "../component/Footer/Footer.jsx";
 import "../styles/AdminLogin.css";
 function AdminLogin() {
   const [secret, setSecret] = useState("");
@@ -28,6 +30,8 @@ function AdminLogin() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="admin-login-container">
       <div className="admin-login-card">
         <div className="brand-section">
@@ -96,6 +100,8 @@ function AdminLogin() {
         </footer>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

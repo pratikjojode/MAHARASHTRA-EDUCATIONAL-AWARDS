@@ -2,9 +2,9 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../styles/Hero.css";
-import heroBg1 from "../../assets/anthony-delanoix-hzgs56Ze49s-unsplash.jpg";
-import heroBg2 from "../../assets/ian-schneider-PAykYb-8Er8-unsplash.jpg";
-import heroBg3 from "../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
+import heroBg1 from "../../assets/hero-bg.jpg";
+import heroBg2 from "../../assets/hero-bgg2.jpg";
+import heroBg3 from "../../assets/hero-bgg3.jpg";
 import jobizzaLogo from "../../assets/jobizza-logo.png";
 import { FaArrowRight, FaAward } from "react-icons/fa";
 
@@ -17,7 +17,7 @@ const Hero = () => {
         <Carousel
           autoPlay
           infiniteLoop
-          interval={3000}
+          interval={6000}
           showThumbs={false}
           showStatus={false}
           showIndicators={false}

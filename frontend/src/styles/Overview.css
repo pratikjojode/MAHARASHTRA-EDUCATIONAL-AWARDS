@@ -1,8 +1,7 @@
 /* components/Overview/Overview.css */
 .overview {
-  background-color: #f4f6f9;
-  padding: 4rem 0;
-  position: relative;
+  padding: 5rem 0;
+  background-color: white;
 }
 
 .section-header {
@@ -12,9 +11,8 @@
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #222;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .divider {
@@ -22,80 +20,17 @@
   height: 4px;
   background-color: #e63946;
   margin: 0 auto;
-  border-radius: 2px;
-}
-
-.overview-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
 }
 
 .overview-content {
-  flex: 1 1 50%;
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-content p {
   font-size: 1.1rem;
-  line-height: 1.9;
-  color: #444;
-  transition: all 0.3s ease-in-out;
-}
-
-.overview-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-}
-
-.overview-image {
-  flex: 1 1 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overview-image img {
-  width: 100%;
-  max-width: 520px;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.overview-image img:hover {
-  transform: scale(1.03);
-}
-
-/* Responsive Styling */
-@media (max-width: 1024px) {
-  .overview-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .overview-content {
-    padding: 2rem;
-  }
-
-  .overview-image img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .overview-content {
-    font-size: 1rem;
-  }
-
-  .overview {
-    padding: 3rem 1rem;
-  }
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
 }

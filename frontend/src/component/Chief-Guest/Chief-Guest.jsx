@@ -18,32 +18,22 @@ const ChiefGuest = () => {
           </div>
           <div className="guest-details">
             <h3>
-              <strong>Dr. A.P.J. Abdul Kalam</strong>
+              <strong>Dr. Parag Kalkar</strong>
             </h3>
             <p className="guest-title">
-              <strong>Former President of India & Eminent Scientist</strong>
+              <strong>Pro Vice Chancellor at Savitribai Phule Pune University</strong>
             </p>
             <p className="guest-bio">
-              <strong>Dr. A.P.J. Abdul Kalam</strong>, widely known as the{" "}
-              <strong>"People's President"</strong> and the
-              <strong> "Missile Man of India"</strong>, was a visionary leader
-              who dedicated his life to the advancement of education and
-              scientific research in India. His contributions to India's space
-              and missile programs are legendary, and his passion for inspiring
-              young minds made him one of the most beloved figures in Indian
-              education.
+              <strong>Dr. Parag Kalkar</strong> is Director, Sinhgad Institute of Management, Dean, Faculty of Commerce and Management Member, Academic Council Member & Senate at Savitribai Phule Pune University.
+              He holds an M.Com, MMS (Finance), PhD and FDP (IIMA), and has more than 24 years of teaching experience.
             </p>
             <p className="guest-bio">
-              As our chief guest, <strong>Dr. Kalam</strong> will share his
+              As our chief guest, <strong>Dr. Kalkar</strong> will share his
               insights on the <strong>future of education in India</strong>
               and the{" "}
               <strong>
                 role educators play in shaping the nation's destiny
-              </strong>
-              . His presence at the
-              <strong> Maharashtra Education Icon Awards</strong> is a testament
-              to the importance of this event in recognizing educational
-              excellence.
+              </strong>Dr Kalkar has also worked with Sinhgad Institutes for more than 21 years, serving as Professor & Director, Sinhgad Institute of Management, Campus Director & CEO at Sinhgad Campus, Lonavala, Deputy Registrar (Academic) and Deputy Registrar (Admissions), Sinhgad Institutes. He also served as Treasurer for the Association of Indian Management Schools (AIMS).
             </p>
           </div>
         </div>
