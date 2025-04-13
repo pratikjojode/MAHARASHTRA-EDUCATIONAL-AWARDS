@@ -34,13 +34,8 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <NavLink
-            to="/jobizza"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-            onClick={closeMenu}
-          >
-            Explore
-          </NavLink>
+          
+          
           <NavLink
             to="/chief-guest"
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
