@@ -216,7 +216,6 @@ const Insights = () => {
             </div>
             <div className="event-card">
               <div className="card-header">
-                <span className="event-badge">New</span>
                 <h4>Jobizza Career Fair 2024</h4>
               </div>
               <div className="event-details">
