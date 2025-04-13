@@ -9,6 +9,7 @@ import Categories from "../component/Categories/Categories";
 import Jobizza from "../component/Jobizza/Jobizza";
 import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/Navbar";
+import FAQ from "../component/FAQ/FAQ";
 import "../index.css";
 import "../App.css";
 const Home = () => {
@@ -65,6 +66,7 @@ const Home = () => {
       <Sponsors />
       <Categories />
       <Jobizza />
+      <FAQ />
       <Footer />
     </div>
   );
