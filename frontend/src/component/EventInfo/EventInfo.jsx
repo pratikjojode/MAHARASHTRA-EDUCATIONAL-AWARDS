@@ -1,14 +1,14 @@
 // src/components/EventInfo.jsx
 import React, { useEffect, useState } from "react";
-import { 
-  FaCalendarAlt, 
-  FaMapMarkerAlt, 
-  FaClock, 
-  FaTicketAlt, 
-  FaFacebookF, 
-  FaTwitter, 
-  FaWhatsapp, 
-  FaMapMarkedAlt 
+import {
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaClock,
+  FaTicketAlt,
+  FaFacebookF,
+  FaTwitter,
+  FaWhatsapp,
+  FaMapMarkedAlt,
 } from "react-icons/fa";
 import "../../styles/EventInfo.css"; // Adjust the path as necessary
 
@@ -16,7 +16,7 @@ const EventInfo = () => {
   const eventDate = new Date("2025-06-07T18:30:00"); // Set your event date and time
   const [timeLeft, setTimeLeft] = useState({});
   const [animate, setAnimate] = useState(false);
-  
+
   // Event details for sharing
   const eventName = "Event at Sunny's World";
   const eventLocation = "Sunny's World, Pune";
@@ -61,24 +61,30 @@ const EventInfo = () => {
 
   // Social sharing functions
   const shareOnFacebook = () => {
-    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(eventDescription)}`;
-    window.open(url, '_blank', 'width=600,height=400');
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      window.location.href
+    )}&quote=${encodeURIComponent(eventDescription)}`;
+    window.open(url, "_blank", "width=600,height=400");
   };
 
   const shareOnTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(eventName)}&url=${encodeURIComponent(window.location.href)}`;
-    window.open(url, '_blank', 'width=600,height=400');
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      eventName
+    )}&url=${encodeURIComponent(window.location.href)}`;
+    window.open(url, "_blank", "width=600,height=400");
   };
 
   const shareOnWhatsapp = () => {
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(eventName + ' - ' + eventDescription + ' ' + window.location.href)}`;
-    window.open(url, '_blank');
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+      eventName + " - " + eventDescription + " " + window.location.href
+    )}`;
+    window.open(url, "_blank");
   };
 
   // Open location in Google Maps
   const openInMaps = () => {
     const url = `https://www.google.com/maps?q=${eventLatLng}`;
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
@@ -87,7 +93,7 @@ const EventInfo = () => {
         <div className="info-box">
           <div className="countdown-container">
             <h3 className="countdown-title">Event Countdown</h3>
-            
+
             <div className="datetime-display">
               <div className="info-item date-item">
                 <FaCalendarAlt className="info-icon" />
@@ -98,51 +104,61 @@ const EventInfo = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="countdown-timer">
               <div className="time-unit">
-                <div className={`time-card ${animate ? 'flip' : ''}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.days || 0)}</span>
+                <div className={`time-card ${animate ? "flip" : ""}`}>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.days || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Days</span>
               </div>
               <div className="time-separator">:</div>
-              
+
               <div className="time-unit">
-                <div className={`time-card ${animate ? 'flip' : ''}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.hours || 0)}</span>
+                <div className={`time-card ${animate ? "flip" : ""}`}>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.hours || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Hours</span>
               </div>
               <div className="time-separator">:</div>
-              
+
               <div className="time-unit">
-                <div className={`time-card ${animate ? 'flip' : ''}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.minutes || 0)}</span>
+                <div className={`time-card ${animate ? "flip" : ""}`}>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.minutes || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Minutes</span>
               </div>
               <div className="time-separator">:</div>
-              
+
               <div className="time-unit">
-                <div className={`time-card ${animate ? 'flip' : ''}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.seconds || 0)}</span>
+                <div className={`time-card ${animate ? "flip" : ""}`}>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.seconds || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Seconds</span>
               </div>
             </div>
-            
+
             <div className="progress-container">
               <div className="progress-bar">
-                <div 
-                  className="progress-fill" 
+                <div
+                  className="progress-fill"
                   style={{ width: `${calculateProgress()}%` }}
                 ></div>
               </div>
-              <p className="progress-text">Time is running out! Reserve your spot now</p>
+              <p className="progress-text">
+                Time is running out! Reserve your spot now
+              </p>
             </div>
           </div>
-          
+
           <div className="info-items-row">
             <div className="info-item location-item">
               <FaMapMarkerAlt className="info-icon" />
@@ -154,7 +170,7 @@ const EventInfo = () => {
                 </button>
               </div>
             </div>
-            
+
             <div className="info-item ticket-item">
               <FaTicketAlt className="info-icon" />
               <div className="info-content">
@@ -174,7 +190,7 @@ const EventInfo = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="share-event">
           <p>Excited? Share this event with friends!</p>
           <div className="share-buttons">
