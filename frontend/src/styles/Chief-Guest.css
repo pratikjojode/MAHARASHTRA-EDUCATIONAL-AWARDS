@@ -1,4 +1,3 @@
-/* components/ChiefGuest/ChiefGuest.css */
 :root {
   --gold: #e63946;
   --gold-light: #e63946;
@@ -16,6 +15,10 @@
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .chief-guest::before {
@@ -35,11 +38,13 @@
   padding: 0 2rem;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  width: 100%;
 }
 
 .section-header h2 {
@@ -67,69 +72,95 @@
 .divider {
   height: 1px;
   width: 200px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(0, 0, 0, 0.2),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
   margin: 1.5rem auto;
 }
 
-.guest-profile {
+/* Guest Card Layout */
+.guest-container {
   display: flex;
-  gap: 4rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.guest-card {
+  width: 400px;
   background: var(--light);
   border-radius: 16px;
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
-  overflow: hidden;
-}
-
-.guest-image {
-  flex: 1;
-  min-width: 350px;
+  transition: var(--transition);
   position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 340px;
   overflow: hidden;
 }
 
-.guest-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  z-index: 1;
-}
-
-.guest-image img {
+.image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: var(--transition);
+  transition: transform 0.4s ease;
 }
 
-.guest-profile:hover .guest-image img {
-  transform: scale(1.05);
+.image-container:hover img {
+  transform: scale(1.1);
 }
 
-.guest-details {
-  flex: 1;
-  padding: 3rem;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.guest-details h3 {
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .description {
+  margin-bottom: 1rem;
+}
+
+/* LinkedIn Section */
+.linkedin-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.linkedin-icon {
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+.linkedin-icon:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+/* Guest Info Below Image */
+.guest-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.guest-info h3 {
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 0.5rem;
@@ -137,46 +168,15 @@
 
 .guest-title {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--gold-dark);
-  margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.guest-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--gold);
-}
-
-.guest-bio {
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--dark);
-  margin-bottom: 1.5rem;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .guest-profile {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .guest-image {
-    min-width: 100%;
-    height: 400px;
-  }
-
-  .guest-details {
-    padding: 2.5rem;
+  .guest-container {
+    justify-content: center;
   }
 }
 
@@ -185,12 +185,22 @@
     font-size: 2.2rem;
   }
 
-  .guest-details h3 {
-    font-size: 1.8rem;
+  .guest-card {
+    width: 100%;
+    max-width: 400px;
   }
 
-  .guest-details {
-    padding: 2rem;
+  .guest-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .overlay {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .linkedin-section {
+    font-size: 0.8rem;
   }
 }
 
@@ -203,19 +213,23 @@
     font-size: 1.8rem;
   }
 
-  .guest-image {
-    height: 300px;
+  .guest-card {
+    width: 100%;
   }
 
-  .guest-details {
-    padding: 1.5rem;
-  }
-
-  .guest-details h3 {
-    font-size: 1.5rem;
+  .guest-info h3 {
+    font-size: 1.1rem;
   }
 
   .guest-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .overlay {
+    font-size: 0.85rem;
+  }
+
+  .linkedin-section {
+    font-size: 0.85rem;
   }
 }

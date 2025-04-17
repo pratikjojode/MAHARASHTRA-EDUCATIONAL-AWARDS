@@ -6,7 +6,11 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+<<<<<<< HEAD
   margin-top: 80px;
+=======
+  /* No margin-top to avoid white space */
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 }
 
 .hero-background {
@@ -48,11 +52,16 @@
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
+<<<<<<< HEAD
   pointer-events: none; /* Prevent content from blocking arrows */
 }
 
 .hero-content * {
   pointer-events: auto; /* Allow buttons/links inside to be clickable */
+=======
+  /* Added padding-top to account for navbar height */
+  padding-top: 80px;
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 }
 
 /* Presentation badge */
@@ -183,6 +192,7 @@
   transform: translateX(5px);
 }
 
+<<<<<<< HEAD
 /* Carousel Arrows */
 .slick-arrow,
 .control-arrow {
@@ -194,9 +204,29 @@
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
+=======
+/* Custom Dot Indicators */
+.carousel .control-dots {
+  position: absolute;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
   border-radius: 50%;
-  transform: translateY(-50%);
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
   transition: all 0.3s ease;
+<<<<<<< HEAD
   pointer-events: auto;
 }
 
@@ -213,6 +243,20 @@
 .slick-arrow:hover,
 .control-arrow:hover {
   background: rgba(0, 0, 0, 0.6);
+=======
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.carousel .dot.selected,
+.carousel .dot:hover {
+  background: #e63946;
+  transform: scale(1.2);
+}
+
+.carousel .dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 }
 
 /* Animations */
@@ -271,6 +315,10 @@
   .bg-image {
     height: 100vh;
   }
+  /* Adjust the hero-content padding-top for mobile navbar height */
+  .hero-content {
+    padding-top: 70px;
+  }
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -295,6 +343,11 @@
     flex-direction: column;
     gap: 10px;
   }
+  .carousel .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -313,4 +366,13 @@
   .presenter-logo {
     height: 25px;
   }
+<<<<<<< HEAD
 }
+=======
+  .carousel .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+}
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432

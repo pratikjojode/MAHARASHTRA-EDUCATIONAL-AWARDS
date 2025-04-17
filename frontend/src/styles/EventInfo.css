@@ -75,11 +75,15 @@
   transform: translateY(-55px);
 }
 
-.info-items-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.info-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.location-container {
   margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .info-item {
@@ -94,6 +98,8 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  width: 100%;
 }
 
 .info-content {
@@ -162,16 +168,28 @@
   color: #333;
 }
 
-/* Center the date item */
-.datetime-display {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+/* Add to Calendar button */
+.add-to-calendar-btn {
+  display: block;
+  margin: -0.5rem auto 2rem;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
 }
 
-.date-item {
-  max-width: 350px;
-  width: 100%;
+.add-to-calendar-btn:hover {
+  background-color: #d62828;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(214, 40, 40, 0.4);
 }
 
 /* Countdown specific styles */
@@ -386,52 +404,6 @@
   box-shadow: 0 4px 8px rgba(214, 40, 40, 0.4);
 }
 
-/* Ticket availability indicator */
-.availability-indicator {
-  display: flex;
-  align-items: center;
-  margin-top: 0.8rem;
-  gap: 0.5rem;
-}
-
-.availability-dots {
-  display: flex;
-  gap: 3px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-.dot.filled {
-  background-color: #e63946;
-}
-
-/* Tooltip styles */
-.hover-tooltip {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #e63946;
-  color: white;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  text-align: center;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  border-radius: 0 0 14px 14px;
-  opacity: 0;
-}
-
-.info-item:hover .hover-tooltip {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* Share event section */
 .share-event {
   margin-top: 2rem;
@@ -479,6 +451,10 @@
   background-color: #25d366;
 }
 
+.share-btn.instagram {
+  background-color: #e1306c;
+}
+
 .share-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -486,10 +462,13 @@
 
 /* Responsive styles */
 @media (max-width: 992px) {
+<<<<<<< HEAD
   .info-items-row {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
+=======
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
   .time-card {
     width: 60px;
     height: 60px;
@@ -540,10 +519,13 @@
 }
 
 @media (max-width: 480px) {
+<<<<<<< HEAD
   .info-items-row {
     grid-template-columns: 1fr;
   }
 
+=======
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
   .time-card {
     width: 45px;
     height: 45px;
@@ -561,12 +543,21 @@
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
+<<<<<<< HEAD
 
   .datetime-display {
     margin-bottom: 1rem;
   }
 
   .date-item {
+=======
+  
+  .info-container {
+    margin-bottom: 1rem;
+  }
+  
+  .info-item {
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
     max-width: 100%;
   }
 }

@@ -11,6 +11,8 @@ import AdminDashboard from "./admin/AdminDashboard";
 import AdminLayout from "./layout/AdminLayout";
 import Home from "./pages/HomePage";
 import SponsorsPage from "./pages/SponsorsPage";
+import Speakers from "./pages/Speakers"; // Adjust path if needed
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
@@ -82,6 +84,8 @@ function App() {
           <Route path="/ourInsights" element={<Insights />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/sponsors" element={<SponsorsPage />} />
+          <Route path="/speakers" element={<Speakers />} />
+
           <Route
             path="/admin-login"
             element={<AdminLogin setIsAdmin={setIsAdmin} />}

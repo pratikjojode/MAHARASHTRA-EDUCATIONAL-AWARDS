@@ -1,5 +1,6 @@
 // src/components/EventInfo.jsx
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
@@ -9,6 +10,17 @@ import {
   FaTwitter,
   FaWhatsapp,
   FaMapMarkedAlt,
+=======
+import { 
+  FaCalendarAlt, 
+  FaMapMarkerAlt, 
+  FaClock, 
+  FaFacebookF, 
+  FaTwitter, 
+  FaWhatsapp, 
+  FaMapMarkedAlt,
+  FaInstagram
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 } from "react-icons/fa";
 import "../../styles/EventInfo.css"; // Adjust the path as necessary
 
@@ -22,6 +34,7 @@ const EventInfo = () => {
   const eventLocation = "Sunny's World, Pune";
   const eventDescription = "Join us for an amazing event!";
   const eventLatLng = "18.5204,73.8567"; // Example coordinates for Pune
+  const instagramPage = "https://www.instagram.com/yourusername"; // Replace with your Instagram URL
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -81,10 +94,25 @@ const EventInfo = () => {
     window.open(url, "_blank");
   };
 
+  const openInstagram = () => {
+    window.open(instagramPage, '_blank');
+  };
+
   // Open location in Google Maps
   const openInMaps = () => {
     const url = `https://www.google.com/maps?q=${eventLatLng}`;
     window.open(url, "_blank");
+  };
+
+  // Add to Google Calendar
+  const addToCalendar = () => {
+    const startDate = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
+    const endDate = new Date(eventDate.getTime() + 3 * 60 * 60 * 1000) // Assuming 3 hour event
+      .toISOString().replace(/-|:|\.\d+/g, '');
+    
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventName)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
+    
+    window.open(url, '_blank');
   };
 
   return (
@@ -93,18 +121,29 @@ const EventInfo = () => {
         <div className="info-box">
           <div className="countdown-container">
             <h3 className="countdown-title">Event Countdown</h3>
+<<<<<<< HEAD
 
             <div className="datetime-display">
+=======
+            
+            <div className="info-container">
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
               <div className="info-item date-item">
                 <FaCalendarAlt className="info-icon" />
                 <div className="info-content">
                   <h3>Date & Time</h3>
                   <p>7 June 2025, 6:30 PM</p>
-                  <div className="hover-tooltip">Add to Calendar</div>
                 </div>
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <button className="add-to-calendar-btn" onClick={addToCalendar}>
+              ADD TO CALENDAR
+            </button>
+            
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
             <div className="countdown-timer">
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
@@ -153,6 +192,7 @@ const EventInfo = () => {
                   style={{ width: `${calculateProgress()}%` }}
                 ></div>
               </div>
+<<<<<<< HEAD
               <p className="progress-text">
                 Time is running out! Reserve your spot now
               </p>
@@ -160,6 +200,13 @@ const EventInfo = () => {
           </div>
 
           <div className="info-items-row">
+=======
+              <p className="progress-text">TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW</p>
+            </div>
+          </div>
+          
+          <div className="info-container location-container">
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
             <div className="info-item location-item">
               <FaMapMarkerAlt className="info-icon" />
               <div className="info-content">
@@ -170,6 +217,7 @@ const EventInfo = () => {
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
 
             <div className="info-item ticket-item">
               <FaTicketAlt className="info-icon" />
@@ -188,6 +236,8 @@ const EventInfo = () => {
                 </div>
               </div>
             </div>
+=======
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
           </div>
         </div>
 
@@ -202,6 +252,9 @@ const EventInfo = () => {
             </button>
             <button className="share-btn whatsapp" onClick={shareOnWhatsapp}>
               <FaWhatsapp className="share-icon" /> WhatsApp
+            </button>
+            <button className="share-btn instagram" onClick={openInstagram}>
+              <FaInstagram className="share-icon" /> Instagram
             </button>
           </div>
         </div>

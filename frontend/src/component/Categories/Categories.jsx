@@ -6,12 +6,12 @@ import { FaChalkboardTeacher, FaSchool, FaLightbulb, FaHandsHelping } from 'reac
 const Categories = () => {
   const categories = [
     {
-      title: "Best Educational Leader",
+      title: "Academic Excellence",
       description: "Recognizing principals and directors who have demonstrated exceptional leadership in advancing their institution's mission.",
       icon: <FaChalkboardTeacher className="category-icon" />
     },
     {
-      title: "Excellence in Teaching",
+      title: " Reasearch Excellence and Impact",
       description: "Honoring teachers who inspire, engage and transform the learning experience for their students.",
       icon: <FaSchool className="category-icon" />
     },
@@ -21,8 +21,9 @@ const Categories = () => {
       icon: <FaLightbulb className="category-icon" />
     },
     {
-      title: "Community Impact",
-      description: "Recognizing educational initiatives that have made a significant positive impact on their communities.",
+      title: "Placements Achievements and Alumni Growth",
+      description: "Recognizing institutions that have excelled in student placements and alumni success.",
+      
       icon: <FaHandsHelping className="category-icon" />
     }
   ];

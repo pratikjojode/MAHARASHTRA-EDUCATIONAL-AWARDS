@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+
 const Footer = () => {
   return (
     <footer className="footer" id="contact">
@@ -21,10 +22,22 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-section">
-          <h3>Contact Info</h3>
-          <p><FaMapMarkerAlt className="footer-icon" /> Sunny's World, Pune</p>
-          <p><FaPhone className="footer-icon" /> +91 8888181889</p>
-          <p><FaEnvelope className="footer-icon" /> gaurav@jobizza.com</p>
+            <h3>Contact Info</h3>
+            <p>
+              <a href="https://maps.google.com/?q=Sunny's World, Pune" target="_blank" rel="noopener noreferrer">
+                <FaMapMarkerAlt className="footer-icon" /> Sunny's World, Pune
+              </a>
+            </p>
+            <p>
+              <a href="tel:+918888181889">
+                <FaPhone className="footer-icon" /> +91 8888181889
+              </a>
+            </p>
+            <p>
+              <a href="mailto:gaurav@jobizza.com">
+                <FaEnvelope className="footer-icon" /> gaurav@jobizza.com
+              </a>
+            </p>
           </div>
         </div>
         <div className="footer-bottom">
@@ -35,7 +48,9 @@ const Footer = () => {
             <a href="https://www.linkedin.com/company/jobizza-justice-with-your-innovations/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
-            <span><FaEnvelope /></span>
+            <a href="mailto:gaurav@jobizza.com">
+              <FaEnvelope />
+            </a>
           </div>
         </div>
       </div>
