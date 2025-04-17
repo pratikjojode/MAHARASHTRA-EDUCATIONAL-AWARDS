@@ -1,26 +1,15 @@
 // src/components/EventInfo.jsx
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
+
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
   FaClock,
-  FaTicketAlt,
   FaFacebookF,
   FaTwitter,
   FaWhatsapp,
   FaMapMarkedAlt,
-=======
-import { 
-  FaCalendarAlt, 
-  FaMapMarkerAlt, 
-  FaClock, 
-  FaFacebookF, 
-  FaTwitter, 
-  FaWhatsapp, 
-  FaMapMarkedAlt,
-  FaInstagram
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
+  FaInstagram,
 } from "react-icons/fa";
 import "../../styles/EventInfo.css"; // Adjust the path as necessary
 
@@ -95,7 +84,7 @@ const EventInfo = () => {
   };
 
   const openInstagram = () => {
-    window.open(instagramPage, '_blank');
+    window.open(instagramPage, "_blank");
   };
 
   // Open location in Google Maps
@@ -106,13 +95,18 @@ const EventInfo = () => {
 
   // Add to Google Calendar
   const addToCalendar = () => {
-    const startDate = eventDate.toISOString().replace(/-|:|\.\d+/g, '');
+    const startDate = eventDate.toISOString().replace(/-|:|\.\d+/g, "");
     const endDate = new Date(eventDate.getTime() + 3 * 60 * 60 * 1000) // Assuming 3 hour event
-      .toISOString().replace(/-|:|\.\d+/g, '');
-    
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventName)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
-    
-    window.open(url, '_blank');
+      .toISOString()
+      .replace(/-|:|\.\d+/g, "");
+
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+      eventName
+    )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
+      eventDescription
+    )}&location=${encodeURIComponent(eventLocation)}`;
+
+    window.open(url, "_blank");
   };
 
   return (
@@ -121,13 +115,8 @@ const EventInfo = () => {
         <div className="info-box">
           <div className="countdown-container">
             <h3 className="countdown-title">Event Countdown</h3>
-<<<<<<< HEAD
 
-            <div className="datetime-display">
-=======
-            
             <div className="info-container">
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
               <div className="info-item date-item">
                 <FaCalendarAlt className="info-icon" />
                 <div className="info-content">
@@ -137,13 +126,10 @@ const EventInfo = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
             <button className="add-to-calendar-btn" onClick={addToCalendar}>
               ADD TO CALENDAR
             </button>
-            
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
+
             <div className="countdown-timer">
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
@@ -192,21 +178,13 @@ const EventInfo = () => {
                   style={{ width: `${calculateProgress()}%` }}
                 ></div>
               </div>
-<<<<<<< HEAD
               <p className="progress-text">
-                Time is running out! Reserve your spot now
+                TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW
               </p>
             </div>
           </div>
 
-          <div className="info-items-row">
-=======
-              <p className="progress-text">TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW</p>
-            </div>
-          </div>
-          
           <div className="info-container location-container">
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
             <div className="info-item location-item">
               <FaMapMarkerAlt className="info-icon" />
               <div className="info-content">
@@ -217,27 +195,6 @@ const EventInfo = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-
-            <div className="info-item ticket-item">
-              <FaTicketAlt className="info-icon" />
-              <div className="info-content">
-                <h3>Tickets</h3>
-                <p>Limited spots available</p>
-                <div className="availability-indicator">
-                  <div className="availability-dots">
-                    <span className="dot filled"></span>
-                    <span className="dot filled"></span>
-                    <span className="dot filled"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                  </div>
-                  <span>60% Full</span>
-                </div>
-              </div>
-            </div>
-=======
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
           </div>
         </div>
 

@@ -4,21 +4,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../styles/Hero.css";
 import heroBg1 from "../../assets/hero-bgg3.jpg";
 import heroBg2 from "../../assets/hero-bgg2.jpg";
-<<<<<<< HEAD
-import heroBg3 from "../../assets/IMG-20250412-WA0003.jpg";
-import heroBg4 from "../../assets/IMG-20250412-WA0010.jpg";
-import heroBg5 from "../../assets/IMG-20250412-WA0028.jpg";
-// import heroBg3 from "../../assets/hero-bg.jpg";
-=======
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 import jobizzaLogo from "../../assets/jobizza-logo.png";
 import anytimeBarterLogo from "../../assets/anytime-barter-logo.png";
 import { FaArrowRight, FaAward } from "react-icons/fa";
 
 const Hero = () => {
-<<<<<<< HEAD
-  const heroImages = [heroBg1, heroBg2, heroBg3, heroBg4, heroBg5];
-=======
   const heroImages = [heroBg1, heroBg2];
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,9 +18,9 @@ const Hero = () => {
     const handleScroll = () => {
       if (!autoPlay) setAutoPlay(true);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [autoPlay]);
 
   // Handle dot click
@@ -43,7 +33,6 @@ const Hero = () => {
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 
   return (
     <section className="hero">
@@ -63,13 +52,13 @@ const Hero = () => {
           onChange={handleSlideChange}
           renderIndicator={(onClickHandler, isSelected, index, label) => (
             <li
-              className={`dot ${isSelected ? 'selected' : ''}`}
+              className={`dot ${isSelected ? "selected" : ""}`}
               onClick={(e) => {
                 handleDotClick(index);
                 onClickHandler(e);
               }}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') {
+                if (e.key === "Enter") {
                   handleDotClick(index);
                   onClickHandler(e);
                 }
@@ -84,7 +73,11 @@ const Hero = () => {
         >
           {heroImages.map((image, index) => (
             <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className="bg-image" />
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="bg-image"
+              />
             </div>
           ))}
         </Carousel>
