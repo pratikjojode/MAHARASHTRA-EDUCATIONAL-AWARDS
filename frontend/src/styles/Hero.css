@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 80px; /* Account for fixed header */
+  /* No margin-top to avoid white space */
 }
 
 .hero-background {
@@ -47,6 +47,8 @@
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
+  /* Added padding-top to account for navbar height */
+  padding-top: 80px;
 }
 
 /* Presentation badge */
@@ -178,31 +180,38 @@
   transform: translateX(5px);
 }
 
-/* Arrows */
-.slick-arrow {
+/* Custom Dot Indicators */
+.carousel .control-dots {
   position: absolute;
-  top: 50%;
-  z-index: 20;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
   border-radius: 50%;
-  transform: translateY(-50%);
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-.slick-prev {
-  left: 20px;
+.carousel .dot.selected,
+.carousel .dot:hover {
+  background: #e63946;
+  transform: scale(1.2);
 }
 
-.slick-next {
-  right: 20px;
-}
-
-.slick-arrow:hover {
-  background: rgba(0, 0, 0, 0.6);
+.carousel .dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
 }
 
 /* Animations */
@@ -261,6 +270,10 @@
   .bg-image {
     height: 100vh;
   }
+  /* Adjust the hero-content padding-top for mobile navbar height */
+  .hero-content {
+    padding-top: 70px;
+  }
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -285,6 +298,11 @@
     flex-direction: column;
     gap: 10px;
   }
+  .carousel .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -302,5 +320,10 @@
   }
   .presenter-logo {
     height: 25px;
+  }
+  .carousel .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
   }
 }
