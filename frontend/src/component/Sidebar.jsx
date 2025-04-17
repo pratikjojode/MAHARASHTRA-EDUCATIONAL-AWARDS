@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-header">
-        <h3>🏆 Admin Panel</h3>
+        <h3>🏆 Maharashtra Awards Admin Panel</h3>
         <FaTimes className="close-icon" onClick={closeSidebar} />
       </div>
       <nav>
@@ -29,14 +29,14 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           <FaTachometerAlt /> Dashboard
         </NavLink>
 
-        <NavLink to="/" onClick={closeSidebar}>
-          <FaCog /> Home
-        </NavLink>
         {/* Logout as a button */}
         <button className="logout-btn" onClick={logout}>
-          <FaSignOutAlt /> Logout
+          <FaSignOutAlt /> Logout Admin
         </button>
       </nav>
+      <div className="sidebar-footer">
+        <p>Maharashtra.gov.in</p>
+      </div>
     </div>
   );
 };

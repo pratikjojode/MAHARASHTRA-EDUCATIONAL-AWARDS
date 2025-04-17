@@ -6,7 +6,7 @@
   --text-color: #2c3e50;
   --text-light: #555;
   --border-radius: 10px;
-  --box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
 }
 
@@ -15,6 +15,7 @@
   padding: 4rem 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   min-height: 100vh;
+  margin-top: 50px;
 }
 
 .container {
@@ -71,7 +72,7 @@
 }
 
 .tier-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -85,7 +86,7 @@
   overflow-x: auto;
   margin: 3rem 0;
   border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .sponsorship-table {
@@ -97,7 +98,11 @@
 }
 
 .sponsorship-table th {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
   color: white;
   padding: 1.2rem;
   text-align: center;
@@ -183,14 +188,14 @@
   background: white;
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
   border-left: 4px solid var(--primary-color);
 }
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Location Section */
@@ -209,9 +214,13 @@
   width: 100%;
   max-width: 400px;
   transition: var(--transition);
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(245, 245, 245, 0.9) 100%
+  );
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .location-card:hover {
@@ -246,7 +255,11 @@
   align-items: center;
   gap: 10px;
   padding: 15px 35px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
   color: white;
   border: none;
   border-radius: 50px;
@@ -312,7 +325,8 @@
   text-align: center;
 }
 
-.email-content, .phone-content {
+.email-content,
+.phone-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,17 +354,17 @@
   .section-header h2 {
     font-size: 2rem;
   }
-  
-  .sponsorship-table th, 
+
+  .sponsorship-table th,
   .sponsorship-table td {
     padding: 0.8rem;
     font-size: 0.9rem;
   }
-  
+
   .sponsor-categories {
     grid-template-columns: 1fr;
   }
-  
+
   .btn-sponsor {
     padding: 12px 25px;
     font-size: 1rem;
@@ -361,15 +375,15 @@
   .container {
     padding: 0 1rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .sponsorship-tiers {
     padding: 1.5rem;
   }
-  
+
   .contact-tab {
     padding: 0.8rem;
     font-size: 0.9rem;

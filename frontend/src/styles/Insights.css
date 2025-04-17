@@ -9,6 +9,7 @@
   color: #333;
   background-color: #f8f3ee;
   overflow-x: hidden;
+  margin-top: 40px;
 }
 
 /* ========== Header Styles ========== */
@@ -27,7 +28,7 @@
   background: linear-gradient(90deg, #2a5c45, #7a9a83);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+
   display: inline-block;
 }
 

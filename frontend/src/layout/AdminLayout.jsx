@@ -11,21 +11,25 @@ const AdminLayout = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <div className="admin-layout">
-      {/* Header with Hamburger and Logout */}
       <header className="admin-header">
         <div className="hamburger" onClick={toggleSidebar}>
           <FaBars />
         </div>
+        <div className="header-title">Maharashtra Awards Admin Panel</div>
         <div className="admin-header-right"></div>
       </header>
 
+      {/* Overlay for small screen when sidebar is open */}
+      {isSidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
+
       {/* Sidebar */}
-      <Sidebar
-        isOpen={isSidebarOpen}
-        closeSidebar={() => setIsSidebarOpen(false)}
-      />
+      <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
 
       {/* Main Content */}
       <main className={`admin-main ${isSidebarOpen ? "blurred" : ""}`}>
