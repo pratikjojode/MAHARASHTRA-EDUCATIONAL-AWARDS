@@ -1,9 +1,9 @@
-import React from 'react';
-import '../../styles/Chief-Guest.css';
+import React from "react";
+import "../../styles/Chief-Guest.css";
 import chiefGuestImage1 from "../../assets/chief-guest.jpg";
 import chiefGuestImage2 from "../../assets/chief-guest-2.jpg";
-import { FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const guests = [
   {
@@ -11,15 +11,15 @@ const guests = [
     title: "Higher and technical education minister of Maharashtra state",
     image: chiefGuestImage2,
     description: `Chandrakant Bacchu Patil is an Indian politician and the Higher and technical education minister of Maharashtra state in the present Government of Maharashtra.`,
-    xTwitter: "https://x.com/ChDadaPatil"
+    xTwitter: "https://x.com/ChDadaPatil",
   },
   {
     name: "Dr. Parag Kalkar",
     title: "Pro Vice Chancellor at Savitribai Phule Pune University",
     image: chiefGuestImage1,
     description: `Dr. Parag Kalkar is Director of Sinhgad Institute of Management... and the role educators play in shaping the nation's destiny.`,
-    linkedin: "https://www.linkedin.com/in/dr-parag-kalkar-1b80b924/"
-  }
+    linkedin: "https://www.linkedin.com/in/dr-parag-kalkar-1b80b924/",
+  },
 ];
 
 const ChiefGuest = () => {
@@ -40,12 +40,24 @@ const ChiefGuest = () => {
                     <p className="description">{guest.description}</p>
                     <div className="linkedin-section">
                       {guest.linkedin && (
-                        <a href={guest.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-icon" aria-label="LinkedIn Profile">
+                        <a
+                          href={guest.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="linkedin-icon"
+                          aria-label="LinkedIn Profile"
+                        >
                           <FaLinkedin />
                         </a>
                       )}
                       {guest.xTwitter && (
-                        <a href={guest.xTwitter} target="_blank" rel="noopener noreferrer" className="linkedin-icon" aria-label="X Profile">
+                        <a
+                          href={guest.xTwitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="linkedin-icon"
+                          aria-label="X Profile"
+                        >
                           <FaXTwitter />
                         </a>
                       )}
@@ -54,7 +66,9 @@ const ChiefGuest = () => {
                 </div>
               </div>
               <div className="guest-info">
-                <h3><strong>{guest.name}</strong></h3>
+                <h3>
+                  <strong>{guest.name}</strong>
+                </h3>
                 <p className="guest-title">{guest.title}</p>
               </div>
             </div>

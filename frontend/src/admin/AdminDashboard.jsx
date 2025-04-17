@@ -26,7 +26,7 @@ function AdminDashboard() {
   const [visibleColumns, setVisibleColumns] = useState({});
   const [viewModalVisible, setViewModalVisible] = useState(false);
   const [selectedResponse, setSelectedResponse] = useState(null);
-  const [viewMode, setViewMode] = useState("table"); // 'table' or 'grid'
+  const [viewMode, setViewMode] = useState("table");
 
   const fetchData = async () => {
     setIsLoading(true);

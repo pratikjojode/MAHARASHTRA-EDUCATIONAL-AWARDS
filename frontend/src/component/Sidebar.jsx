@@ -28,15 +28,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <NavLink to="/admin/dashboard" onClick={closeSidebar}>
           <FaTachometerAlt /> Dashboard
         </NavLink>
-        <NavLink to="/admin/users" onClick={closeSidebar}>
-          <FaUsers /> Users
-        </NavLink>
-        <NavLink to="/admin/posts" onClick={closeSidebar}>
-          <FaFileAlt /> Content
-        </NavLink>
-        <NavLink to="/admin/settings" onClick={closeSidebar}>
-          <FaCog /> Settings
-        </NavLink>
+
         <NavLink to="/" onClick={closeSidebar}>
           <FaCog /> Home
         </NavLink>

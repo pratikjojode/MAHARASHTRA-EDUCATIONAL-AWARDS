@@ -1,3 +1,7 @@
+/* ============================= */
+/*         HERO SECTION         */
+/* ============================= */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -6,13 +10,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-<<<<<<< HEAD
-  margin-top: 80px;
-=======
-  /* No margin-top to avoid white space */
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 }
 
+/* Background Wrapper */
 .hero-background {
   position: absolute;
   top: 0;
@@ -22,49 +22,41 @@
   z-index: 1;
 }
 
-.bg-image {
+/* Background Image inside Carousel */
+.carousel-slide img.bg-image {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
 }
 
+/* Optional Overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.7)
-  );
-  z-index: 2;
-  pointer-events: none; /* Fix for arrow click issue */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
+/* ============================= */
+/*       HERO CONTENT AREA      */
+/* ============================= */
+
 .hero-content {
-  z-index: 3;
+  z-index: 2;
   position: relative;
   text-align: center;
   color: white;
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
-<<<<<<< HEAD
-  pointer-events: none; /* Prevent content from blocking arrows */
-}
-
-.hero-content * {
-  pointer-events: auto; /* Allow buttons/links inside to be clickable */
-=======
-  /* Added padding-top to account for navbar height */
   padding-top: 80px;
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
 }
 
-/* Presentation badge */
+/* "Presented by" */
 .presented-by {
   display: flex;
   flex-direction: column;
@@ -95,6 +87,10 @@
   max-width: 150px;
   width: auto;
 }
+
+/* ============================= */
+/*         TITLE SECTION        */
+/* ============================= */
 
 .award-title {
   margin-bottom: 20px;
@@ -127,6 +123,10 @@
   color: #e63946;
 }
 
+/* ============================= */
+/*          SUBTITLE            */
+/* ============================= */
+
 .hero-subtitle {
   font-size: 1.8rem;
   font-weight: 300;
@@ -135,11 +135,17 @@
   animation: fadeIn 1.2s ease;
 }
 
+/* ============================= */
+/*          BUTTONS             */
+/* ============================= */
+
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 25px;
   animation: fadeInUp 1s ease;
+  z-index: 10; /* Ensures buttons are above other content */
+  position: relative; /* Allows z-index to work */
 }
 
 .btn {
@@ -154,10 +160,7 @@
   font-size: 1.1rem;
 }
 
-.btn-icon {
-  transition: transform 0.3s ease;
-}
-
+/* Primary */
 .btn-primary {
   background-color: #e63946;
   color: white;
@@ -171,10 +174,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.btn-primary:hover .btn-icon {
-  transform: translateX(5px);
-}
-
+/* Secondary */
 .btn-secondary {
   background-color: transparent;
   color: white;
@@ -188,78 +188,49 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary:hover .btn-icon {
-  transform: translateX(5px);
-}
+/* ============================= */
+/*        CAROUSEL ARROWS       */
+/* ============================= */
 
-<<<<<<< HEAD
-/* Carousel Arrows */
-.slick-arrow,
-.control-arrow {
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next {
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
   position: absolute;
   top: 50%;
-  z-index: 4;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px;
-=======
-/* Custom Dot Indicators */
-.carousel .control-dots {
-  position: absolute;
-  bottom: 20px;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
+  transform: translateY(-50%);
 }
 
-.carousel .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-<<<<<<< HEAD
-  pointer-events: auto;
-}
-
-.slick-prev,
-.control-prev {
+.ant-carousel .slick-prev {
   left: 20px;
 }
 
-.slick-next,
-.control-next {
+.ant-carousel .slick-next {
   right: 20px;
 }
 
-.slick-arrow:hover,
-.control-arrow:hover {
-  background: rgba(0, 0, 0, 0.6);
-=======
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.carousel .dot.selected,
-.carousel .dot:hover {
-  background: #e63946;
-  transform: scale(1.2);
+.ant-carousel .slick-prev.slick-disabled,
+.ant-carousel .slick-next.slick-disabled {
+  display: none;
 }
 
-.carousel .dot:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
-}
+/* ============================= */
+/*        ANIMATIONS            */
+/* ============================= */
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -291,17 +262,31 @@
   }
 }
 
-/* Responsive Fixes */
+/* ============================= */
+/*      RESPONSIVE STYLES       */
+/* ============================= */
+
 @media (max-width: 992px) {
   .hero h1 {
     font-size: 3.5rem;
   }
+  /* Background Wrapper */
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
   .title-line-1 {
     font-size: 3rem;
   }
+
   .title-line-2 {
     font-size: 4rem;
   }
+
   .hero-subtitle {
     font-size: 1.5rem;
   }
@@ -310,43 +295,53 @@
 @media (max-width: 768px) {
   .hero {
     height: 100vh;
-    min-height: unset;
   }
+
   .bg-image {
     height: 100vh;
   }
-  /* Adjust the hero-content padding-top for mobile navbar height */
+  /* Background Wrapper */
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
   .hero-content {
     padding-top: 70px;
   }
+
   .hero h1 {
     font-size: 2.8rem;
   }
+
   .title-line-1 {
     font-size: 2.5rem;
   }
+
   .title-line-2 {
     font-size: 3rem;
   }
+
   .hero-subtitle {
     font-size: 1.3rem;
   }
+
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
   }
+
   .btn {
     padding: 12px 25px;
     justify-content: center;
   }
+
   .sponsor-logos {
     flex-direction: column;
     gap: 10px;
-  }
-  .carousel .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
   }
 }
 
@@ -354,25 +349,28 @@
   .hero h1 {
     font-size: 2.2rem;
   }
+  /* Background Wrapper */
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
   .title-line-1 {
     font-size: 2rem;
   }
+
   .title-line-2 {
     font-size: 2.5rem;
   }
+
   .presented-by {
     padding: 10px 20px;
   }
+
   .presenter-logo {
     height: 25px;
   }
-<<<<<<< HEAD
 }
-=======
-  .carousel .dot {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-  }
-}
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
