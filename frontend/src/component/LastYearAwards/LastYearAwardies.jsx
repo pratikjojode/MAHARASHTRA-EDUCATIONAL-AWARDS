@@ -3,7 +3,7 @@ import "../../styles/LastYearAwardies.css";
 
 import GaneshRao from "../../assets/Gr1.jpg";
 import SandeepPachpande from "../../assets/SP1.jpg";
-import RavikumarChitnis from "../../assets/RavikumarCHitnis.jpg";
+import RavikumarChitnis from "../../assets/RavikumarChitnis.jpg";
 import JayeshKatkar from "../../assets/JayeshKatkar.jpg";
 import SantoshBorde from "../../assets/SantoshBorde.jpg";
 import AnshulSharma from "../../assets/MrAnshulSharma.jpg";
