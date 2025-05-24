@@ -8,15 +8,15 @@ import JayeshKatkar from "../../assets/JayeshKatkar.jpg";
 import SantoshBorde from "../../assets/SantoshBorde.jpg";
 import AnshulSharma from "../../assets/MrAnshulSharma.jpg";
 import GirishDesai from "../../assets/GirishDesai.jpg";
-import SHitalWatile from "../../assets/ShitalWatile.jpg";
+import ShitalWatile from "../../assets/ShitalWatile.jpg";
 import EknathKhedkar from "../../assets/EknathKhedkar.jpg";
 import RajveerBhardwaj from "../../assets/RajveerBhardwaj.jpg";
-import AtulkumarJain from "../../assets/Atul_kumar2.png";
-import MangeshKarad from "../../assets/MangeshTkarad.jpg";
+import AtulkumarJain from "../../assets/Atul_Kumar2.png";
+import MangeshKarad from "../../assets/Mangeshkarad.jpg";
 import AnitaDiwakar from "../../assets/AnitaDiwarkar2.jpg";
 import BharatAgarwal from "../../assets/BharatAgarwal.jpg";
 import RamakrishnanRaman from "../../assets/RamakrishnanRaman1.jpg";
-import SUrajSharma from "../../assets/SUrajSharma.jpg";
+import SurajSharma from "../../assets/SurajSharma.jpg";
 import ChetanChaudhari from "../../assets/Chetan-Chaudhari.png";
 import VirajBarge from "../../assets/VirajBarge.jpg";
 import ArjunKale from "../../assets/ArjunKale.jpg";
@@ -35,7 +35,7 @@ import PramodDastoorkar from "../../assets/Pramod.jpg";
 import SanjeevWagh from "../../assets/SanjeevWagh.jpg";
 import MaheshGudar from "../../assets/MaheshGoudar.jpg";
 import MinakshiTyagi from "../../assets/MinakshiTyagi.jpg";
-import ShivaijraoKadam from "../../assets/ShivajiraoKadam.png";
+import ShivajiraoKadam from "../../assets/ShivajiraoKadam.png";
 
 const LastYearAwardees = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -58,7 +58,7 @@ const LastYearAwardees = () => {
     { name: "Dr. Santosh Borde", designation: "DY Patil", image: SantoshBorde },
     { name: "Mr.Anshul Sharma", designation: "MIT", image: AnshulSharma },
     { name: "Dr. Girish Desai", designation: "PCET", image: GirishDesai },
-    { name: "Dr.Shital Watile", designation: "IBMR", image: SHitalWatile },
+    { name: "Dr.Shital Watile", designation: "IBMR", image: ShitalWatile },
     {
       name: "Dr. Eknath Khedkar",
       designation: "DR. DY Patil School of management Ambi",
@@ -82,7 +82,7 @@ const LastYearAwardees = () => {
       designation: "SIBM",
       image: RamakrishnanRaman,
     },
-    { name: "Dr. Suraj Sharma", designation: "RIMS", image: SUrajSharma },
+    { name: "Dr. Suraj Sharma", designation: "RIMS", image: SurajSharma },
     {
       name: "Dr. Chetan Chaudhari",
       designation: "DY patil",
@@ -133,7 +133,7 @@ const LastYearAwardees = () => {
     { name: "Dr. Sanjeev Wagh", designation: "KBPCOE", image: SanjeevWagh },
     { name: "Dr.Mahesh Goudar", designation: "DY Patil", image: MaheshGudar },
     { name: "Ms. Minakshi Tyagi", designation: "DYP", image: MinakshiTyagi },
-    { name: "Dr.Shivajirao Kadam", designation: "MIT", image: ShivaijraoKadam },
+    { name: "Dr.Shivajirao Kadam", designation: "MIT", image: ShivajiraoKadam },
   ];
 
   const awardeesPerPage = 15;
