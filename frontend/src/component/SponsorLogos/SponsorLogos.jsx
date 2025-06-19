@@ -8,6 +8,7 @@ import sponsor_6 from "../../assets/dypatil.jpg";
 import sponsor_7 from "../../assets/aims.png";
 import sponsor_8 from "../../assets/ESTD.png";
 import AiLogo from "../../assets/Partner.jpg";
+import sponsor_9 from "../../assets/jagdamba.jpg";
 
 const SponsorLogos = () => {
   return (
