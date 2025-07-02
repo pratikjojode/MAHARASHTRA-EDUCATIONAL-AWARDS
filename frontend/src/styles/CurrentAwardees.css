@@ -89,7 +89,7 @@
   max-width: 800px;
   margin: 0 auto;
   transition: transform 0.3s ease;
-  height: 650px; /* Increased height for better fit of content */
+   /* Increased height for better fit of content */
   display: flex;
   flex-direction: column;
 }
