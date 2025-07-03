@@ -107,13 +107,13 @@ const CurrentAwardees = () => {
       imageUrl: Best_team_award_training_and_development,
       description: "For exceptional performance in training and development.",
     },
-    {
-      id: 11,
-      name: "Dr. Ashish Lambat",
-      award: " The research excellence award",
-      imageUrl: Dr_ashish_lambat_award,
-      description: "Recognizing outstanding contributions to academic research.",
-    },
+    // {
+    //   id: 11,
+    //   name: "Dr. Ashish Lambat",
+    //   award: " The research excellence award",
+    //   imageUrl: Dr_ashish_lambat_award,
+    //   description: "Recognizing outstanding contributions to academic research.",
+    // },
     {
       id: 12,
       name: "Dr. Chetan Chaudhari",
@@ -121,13 +121,13 @@ const CurrentAwardees = () => {
       imageUrl: Dr_Chetan_Chaudhari_Awards,
       description: "Honoring extensive and impactful service to the institution.",
     },
-    {
-      id: 13,
-      name: "Dr. Nidhi Amit Medhekar",
-      award: " Excellence in educational research award",
-      imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
-      description: "Recognizing research with significant societal impact.",
-    },
+    // {
+    //   id: 13,
+    //   name: "Dr. Nidhi Amit Medhekar",
+    //   award: " Excellence in educational research award",
+    //   imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
+    //   description: "Recognizing research with significant societal impact.",
+    // },
     {
       id: 14,
       name: "Dr. Shittal Watile",
